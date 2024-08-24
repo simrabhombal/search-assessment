@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+
+<meta charset="ISO-8859-1">
+    <!-- Bootstrap CSS -->
+    	<link rel="stylesheet" type="text/css" href="" th:href="@{/css/index.css}">
+  
+  
+  
+<title>Makersharks</title>
+
+  
+
+
+</head>
+<header>
+<div id="a">
+
+<h1 align="center">Makersharks</h1>
+
+</div>
+
+<div id="b">
+<h2 align="center">Have a account?<h2>
+<div align="center" id="c">
+<a th:href="@{/login}" >login</a>
+</div>
+
+</div>
+
+</header>
+
+<body>
+
+</div>
+
+<footer id="con2">
+<div align="center" id="vv">
+
+	<form align="center" th:action="@{/}">
+		<input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+		&nbsp;
+		<input type="submit" value="Search" />
+		&nbsp;
+		<input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+	</form>
+	<br/><br/>
+	
+		<table align="center" border="1" cellpadding="10">
+	
+<div align="center" th:if="${totaljob > 1}">
+		Total Job: [[${totalSupplier}]]
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+	
+		<thead>
+			<tr>
+				<th>supplier_id </th>
+				<th>company_name</th>
+				<th>website</th>
+				<th>Location</th>
+				<th>nature_of_business </th>	
+				<th>manufacturing_processes </th>
+					
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="supplier : ${supplierlist}">
+				<td th:text="${supplier.supplier_id}">supplier_id</td>
+				<td th:text="${supplier.company_name}">company_name</td>
+				<td th:text="${supplier.website}">website</td>
+				<td th:text="${supplier.location}">Location</td>
+				<td th:text="${supplier.nature_of_business}">nature_of_business</td>
+				<td th:text="${supplier.manufacturing_processes}">manufacturing_processes</td>
+				
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	function clearSearch() {
+		window.location = "[[@{/}]]";
+	}
+</script>
+
+
+<br>
+<div id="sf">
+
+
+</div>
+</footer>
+</body>
+</html>

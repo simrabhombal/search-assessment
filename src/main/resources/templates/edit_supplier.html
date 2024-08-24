@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+    	<link rel="stylesheet" type="text/css" href="" th:href="@{/css/index.css}">
+
+<title>Edit Supplier</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Edit Supplier</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${supplier}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>supplier_id:</td>
+					<td><input type="text" th:field="*{supplier_id}" readonly="readonly" /></td>
+				</tr>			
+				<tr>
+					<td>company_name:</td>
+					<td><input type="text" th:field="*{company_name}" /></td>
+				</tr>
+				<tr>
+					<td>website:</td>
+					<td><input type="text" th:field="*{website}" /></td>
+				</tr>
+			
+				<tr>
+					<td>Location:</td>
+					<td><input type="text" th:field="*{location}" /></td>
+				</tr>
+				
+				<tr>
+					<td>nature_of_business:</td>
+					<td><input type="text" th:field="*{nature_of_business}" /></td>
+				</tr>
+
+				<tr>
+					<td>manufacturing_processes :</td>
+					<td><input type="text" th:field="*{manufacturing_processes}" /></td>
+				</tr>
+								
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
