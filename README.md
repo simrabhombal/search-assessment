@@ -47,4 +47,8 @@ mvn spring-boot:run
 
 <h2>API Endpoints</h2>
 
-API Endpoints GET /api/supplier/new\_supplier - Show the form to create a new supplier. POST /save - Save a new supplier. GET /api/supplier/edit/{supplier\_id} - Show the form to edit an existing supplier. POST /api/supplier/delete/{supplier\_id} - Delete a supplier. POST /login - Authenticate users.
+GET /api/supplier/new\_supplier - Show the form to create a new supplier. 
+POST /save - Save a new supplier. 
+GET /api/supplier/edit/{supplier\_id} - Show the form to edit an existing supplier. 
+POST /api/supplier/delete/{supplier\_id} - Delete a supplier. 
+POST /login - Authenticate users.
